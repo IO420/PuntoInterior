@@ -1,0 +1,231 @@
+/* src/components/visualizations/CentralPathLab.module.css */
+.labContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.controlPanel {
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.4rem;
+  box-shadow: var(--shadow-paper);
+}
+
+.sliderHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.sliderLabel {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.sliderValueBadge {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--math-central-path);
+  background: #F0F9FF;
+  border: 1px solid rgba(3, 105, 161, 0.3);
+  padding: 0.24rem 0.7rem;
+  border-radius: var(--radius-sm);
+  min-width: 118px;
+  text-align: center;
+}
+
+.rangeInput {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 7px;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(
+    90deg,
+    #4338CA 0%,
+    #0369A1 65%,
+    #047857 100%
+  );
+  outline: none;
+  cursor: pointer;
+  margin: 0.45rem 0 0.85rem;
+}
+
+.rangeInput::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 3px solid #0369A1;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.25);
+  cursor: grab;
+  transition: transform 0.15s ease;
+}
+
+.rangeInput::-webkit-slider-thumb:active {
+  cursor: grabbing;
+  transform: scale(1.15);
+}
+
+.presetsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.presetsTitle {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-right: 0.25rem;
+}
+
+.presetBtn {
+  padding: 0.3rem 0.65rem;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.73rem;
+  color: var(--text-secondary);
+  background: #F8FAFC;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.presetBtn:hover {
+  color: var(--text-primary);
+  border-color: var(--border-active);
+}
+
+.presetBtnActive {
+  color: #FFFFFF;
+  font-weight: 600;
+  background: #0F172A;
+  border-color: #0F172A;
+}
+
+.canvasCard {
+  position: relative;
+  width: 100%;
+  height: 430px;
+  background: #FFFFFF;
+  border: 1px solid rgba(15, 23, 42, 0.16);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-paper);
+  overflow: hidden;
+}
+
+.canvasHost {
+  width: 100%;
+  height: 100%;
+}
+
+.hudGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+
+.kpiCard {
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 0.95rem;
+  box-shadow: var(--shadow-paper);
+  transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.kpiOptimal {
+  border-color: rgba(4, 120, 87, 0.45);
+  background: #ECFDF5;
+}
+
+.kpiLabel {
+  display: block;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.67rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 0.28rem;
+}
+
+.kpiValue {
+  display: block;
+  font-family: var(--font-mono), monospace;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  min-width: 96px;
+}
+
+.kpiValueOptimal {
+  color: var(--math-optimal-point);
+}
+
+.tableWrapper {
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-paper);
+  overflow-x: auto;
+}
+
+.syncTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.78rem;
+}
+
+.syncTable th,
+.syncTable td {
+  padding: 0.6rem 0.85rem;
+  text-align: right;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.syncTable th:first-child,
+.syncTable td:first-child {
+  text-align: left;
+}
+
+.syncTable th {
+  color: var(--text-secondary);
+  background: #F8FAFC;
+  font-weight: 600;
+}
+
+.syncRow {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.syncRow:hover {
+  background: #F8FAFC;
+}
+
+.syncRowActive {
+  background: #F0F9FF;
+  box-shadow: inset 3px 0 0 var(--math-central-path);
+}
+
+.syncRowActive td:first-child {
+  color: var(--math-central-path);
+  font-weight: 700;
+}
+
+@media (max-width: 720px) {
+  .hudGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

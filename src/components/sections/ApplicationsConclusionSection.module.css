@@ -1,0 +1,168 @@
+.appsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 3.5rem;
+}
+
+.appCard {
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.45rem;
+  box-shadow: var(--shadow-paper);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.1rem;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.appCard:hover {
+  border-color: var(--border-active);
+  box-shadow: var(--shadow-elevated);
+}
+
+.iconBox {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: #F0F9FF;
+  border: 1px solid rgba(3, 105, 161, 0.22);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--math-central-path);
+  margin-bottom: 0.85rem;
+}
+
+.domainTag {
+  display: block;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.67rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+}
+
+.appTitle {
+  font-size: 1.06rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.55rem;
+}
+
+.appDesc {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.metricPill {
+  align-self: flex-start;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.69rem;
+  font-weight: 600;
+  color: var(--math-optimal-point);
+  background: #ECFDF5;
+  border: 1px solid rgba(4, 120, 87, 0.25);
+  padding: 0.24rem 0.6rem;
+  border-radius: var(--radius-sm);
+}
+
+.comparisonBox {
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-paper);
+  overflow-x: auto;
+}
+
+.compHeader {
+  margin-bottom: 1.25rem;
+}
+
+.compTitle {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.3rem;
+}
+
+.compSubtitle {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.compTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.compTable th,
+.compTable td {
+  padding: 0.95rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-subtle);
+  vertical-align: top;
+}
+
+.compTable th {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.76rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+  background: #F8FAFC;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.compTable th:nth-child(2) {
+  color: #BE123C;
+}
+
+.compTable th:nth-child(3) {
+  color: #0369A1;
+}
+
+.criterionCell {
+  font-weight: 600;
+  color: var(--text-primary);
+  width: 24%;
+}
+
+.simplexCell {
+  color: var(--text-secondary);
+  width: 38%;
+}
+
+.ipmCell {
+  color: var(--text-primary);
+  width: 38%;
+}
+
+.footerNote {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-subtle);
+  text-align: center;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 1080px) {
+  .appsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .appsGrid {
+    grid-template-columns: 1fr;
+  }
+}

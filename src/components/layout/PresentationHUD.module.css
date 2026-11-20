@@ -1,0 +1,75 @@
+/* src/components/layout/PresentationHUD.module.css */
+.hudWrapper {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 95;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.42rem 0.8rem;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  box-shadow: var(--shadow-paper);
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.badge:hover {
+  border-color: var(--border-active);
+  color: var(--text-primary);
+}
+
+.badgeActive {
+  border-color: var(--math-central-path);
+  color: var(--math-central-path);
+  font-weight: 600;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--math-central-path);
+}
+
+.kbd {
+  padding: 0.1rem 0.35rem;
+  background: #F1F5F9;
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  font-size: 0.68rem;
+  color: var(--text-primary);
+}
+
+.iconBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  border-radius: 50%;
+  color: var(--text-secondary);
+  box-shadow: var(--shadow-paper);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.iconBtn:hover {
+  color: var(--text-primary);
+  border-color: var(--border-active);
+}
