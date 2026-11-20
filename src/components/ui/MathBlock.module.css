@@ -1,13 +1,16 @@
 .wrapper {
   position: relative;
+  width: 100%;
+  max-width: 100%;
   background: #F8FAFC;
   border: 1px solid var(--border-subtle);
   border-left: 3px solid var(--math-central-path);
   border-radius: var(--radius-sm);
-  padding: 1.1rem 1.35rem;
+  padding: 1.1rem 1rem;
   margin: 0.9rem 0;
   transition: border-color 0.25s ease, background-color 0.25s ease;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .wrapper:hover {
